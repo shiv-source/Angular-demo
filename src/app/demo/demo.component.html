@@ -1,1 +1,76 @@
-<p>demo works!</p>
+<div>
+    <div>
+        <h1 [style.color]="'blue'" >Structural Directive</h1>
+        <h2><span [style.color]="'orange'" >Display Name</span></h2>
+        
+    </div>
+    <div>
+        <span><h2> ngIf conditions </h2></span>
+        <button  (click)="onclick()"  > Click </button>
+         
+            <div  *ngIf="displayText; else elseBlock">
+                <h2><span [style.color]="'green'" >Shiv Kumar</span></h2>
+                
+            </div >
+            <ng-template #elseBlock>
+    
+                    <h2 [style.color]="'red'" >Hidden Name</h2>
+               
+            </ng-template>
+            
+     
+
+        <div  (click)="onClickMouse()"  >
+            <div  *ngIf="displayName; else elseBlock">
+                <h2><span [style.color]="'green'" >Shiv Kumar</span></h2>
+                
+            </div >
+            <ng-template #elseBlock>
+    
+                    <h2 [style.color]="'red'" >Hidden Name</h2>
+               
+            </ng-template>
+            
+        
+        </div>
+      
+    </div>
+
+    <div>
+        <h2>ngIf ,thenBlock ,elseBlock</h2>
+       `    <button  (click)="onClickMsg()"  > Click ,thenBlock,elseBlock </button>
+         
+            <div  *ngIf="displayMsg; then thenBlock; else elseBlock">
+               
+                
+            </div >
+
+            <ng-template #thenBlock>
+    
+                <h2><span [style.color]="'green'" >Shiv Kumar</span></h2>
+           
+        </ng-template>
+
+            <ng-template #elseBlock>
+    
+                    <h2 [style.color]="'red'" >Hidden Name</h2>
+               
+            </ng-template>
+
+    </div>
+   
+    <div>
+        <h2> ngSwitch (for switch cases) </h2>
+        <h3>
+        <div [ngSwitch]="colorss">
+            <div [style.color]="'red'" *ngSwitchCase="'red'" > You picked red color. </div>
+            <div [style.color]="'green'"  *ngSwitchCase="'green'" > You picked green color. </div>
+            <div [style.color]="'blue'" *ngSwitchCase="'blue'"> You picked blue color </div>
+            <div [style.color]="'orange'" *ngSwitchDefault> Try again </div>
+        </div> </h3>
+    </div>
+    <div *ngFor="let color of colors; index as i " >
+        <h3>{{i+1}} {{color}} </h3>
+    </div>
+
+</div>
