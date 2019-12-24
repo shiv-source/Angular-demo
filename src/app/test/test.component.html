@@ -16,3 +16,18 @@
 <h1 [style.color]="styleProp" >Style binding with property binding </h1>
 <h2 [ngStyle]="styleBinding">  ngStyle binding for multiple style binding. </h2>
 <h2><p (click)="clickButton()">{{num}}</p></h2>
+<h2><button (click)="onClick()" >Click </button>{{clickMessage}}</h2>
+<input (keyup)="onKey($event)">
+  <p>{{values}}</p>
+<h2><button (click)="onClickEvent($event)" > Event </button>{{"Event Name= "+ eventMessage}}</h2>
+
+<div> 
+    <h2> Text binding: </h2>
+    <input #box (keyup)="0">
+    <p>{{box.value}}</p>   
+</div>
+<div>
+<span> Two way binding : </span>
+<input [(ngModel)]="textMsg" type="text">
+{{textMsg}}
+</div>
