@@ -72,5 +72,17 @@
     <div *ngFor="let color of colors; index as i " >
         <h3>{{i+1}} {{color}} </h3>
     </div>
+    <div>
+        <h1>Parent to child</h1>
+        
+        <h2>{{"company name ="+ parentData}}</h2>
+
+        <h2>{{"company name ="+company}}</h2>
+    </div>
+
+    <div>
+        <button (click)="fireEvent()" > component info </button>
+
+    </div>
 
 </div>

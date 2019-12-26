@@ -12,7 +12,8 @@
 
     <span>{{ title }} app is running!</span>
     <app-test></app-test>
-    <app-demo></app-demo>
+    <app-demo (childEvent)="message=$event" [parentData]="company" ></app-demo>
+    <div><h2>{{message}} </h2></div>
 
 
 

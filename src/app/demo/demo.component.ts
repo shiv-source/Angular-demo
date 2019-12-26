@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
+  @Input() public parentData;
+  // both are same
+  // @Input('parentData') public company ;
+  @Output() public childEvent = new EventEmitter();
     displayText=true;
     displayName=false;
     displayMsg=false;
@@ -41,6 +45,10 @@ export class DemoComponent implements OnInit {
     else{
       this.displayMsg=true;
     }
+  }
+
+  fireEvent(){
+    this.childEvent.emit('Child component to parent component.')
   }
 
 }
