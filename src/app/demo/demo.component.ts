@@ -14,7 +14,13 @@ export class DemoComponent implements OnInit {
     displayName=false;
     displayMsg=false;
     colorss ='blue';
-    colors=["red","green","orange","blue","white"]
+    colors=["red","green","orange","blue","white"];
+    message ="sHIv kuMAr";
+    nameJson={
+      "shiv": "kumar",
+      "sourav": "Rock",
+    };
+    today= new Date()
 
 
 

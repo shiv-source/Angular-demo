@@ -84,5 +84,35 @@
         <button (click)="fireEvent()" > component info </button>
 
     </div>
-
+    <div>
+        <div><h1>Pipes</h1></div>
+        <div>
+            <h2 [style.color]="'red'" >String Pipes</h2>
+            <h2> {{message }} </h2>
+            <h2>{{message | lowercase}} </h2>
+            <h2> {{message| uppercase}} </h2>
+            <h2> {{message | titlecase}} </h2>
+            <h2> {{message |slice :3:5 }} </h2>
+            <h2>{{message | slice :0:4 }}</h2>
+            <h2> {{message | slice :2:7}} </h2>
+            <h2> {{nameJson | json}} </h2>
+        </div>
+        <div>
+            <h2 [style.color]="'red'" >Integer Pipes</h2>
+            <h2>{{0.25 | percent}}</h2>
+            <h2>{{5.123456789 | number:'1.2-5'}}</h2>
+            <h2>{{5.123456789 | number:'2.2-6'}}</h2>
+            <h2>{{5.123456789 | number:'5.1-2'}}</h2>
+            <h2>{{5.123456789 | number:'1.1-2'}}</h2>
+        </div>
+        <div>                    
+            <h2 [style.color]="'red'" >Date Pipes</h2>
+           <h2> {{today}}</h2>
+           <h2>{{today | date:'shortDate'}}</h2>
+           <h2>{{today | date:'shortTime'}}</h2>
+           <h2>{{today | date:'long'}}</h2>
+           <h2>{{today | date:'longDate'}}</h2>
+           <h2 > {{today | date:'longTime'}} </h2>
+        </div>
+    </div>
 </div>
